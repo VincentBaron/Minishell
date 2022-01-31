@@ -41,16 +41,18 @@ On one part we had to recode built-in functions such as "cd", "pwd", etc. On the
 1. In depth Bash --posix.
 2. Advanced multi-processing.
 3. Process communication with pipes.
-4. How heredocs work ("<< redirections").
-5. Advanced fd managment.
-6. TDD.
-7. Signals overload (Ctr C, Ctrl D, etc.).
-8. Readline fucntion and history to create the command line entry.
-9. Advanced debugging and leaks managment (the most painful part... :sob:).
-10. Abstract Syntax Trees (loved it :sunglasses:).
-11. Lexer / Parsers.
-12. Tokenizers.
-13. Pids and processes managment (painfully with the reimplementation of the "cat | ls" commands :satisfied:).
-14. Environment variables.
+4. redirections ("<", ">", ">>").
+5. dup2 function to redirect STDOUT content into a different process.
+6. How heredocs work ("<< redirections").
+7. Advanced fd managment.
+8. TDD.
+9. Signals overload (Ctr C, Ctrl D, etc.).
+10. Readline fucntion and history to create the command line entry.
+11. Advanced debugging and leaks managment (the most painful part... :sob:).
+12. Abstract Syntax Trees (loved it :sunglasses:).
+13. Lexer / Parsers.
+14. Tokenizers.
+15. Pids and processes managment (painfully with the reimplementation of the "cat | ls" commands :satisfied:).
+16. Environment variables.
 
 
