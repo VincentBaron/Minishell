@@ -5,56 +5,58 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vbaron <vbaron@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/06 16:41:34 by vbaron            #+#    #+#              #
-#    Updated: 2021/09/08 16:06:39 by vbaron           ###   ########.fr        #
+#    Created: 2021/05/20 12:16:14 by cramdani           #+#    #+#              #
+#    Updated: 2021/11/16 15:33:30 by vbaron           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-DIR_S = srcs
-DIR_O = objs
+include minishell.mk
 
-SOURCES = 	minishell.c \
-			error.c \
-			display_prompt.c \
-			init.c \
-			parse.c \
-			get_next_line.c \
+NAME		=	minishell
 
-SRCS = $(addprefix $(DIR_S)/,$(SOURCES))
-OBJS = $(addprefix $(DIR_O)/,$(SOURCES:.c=.o))
-HEADERS = headers
-LIBFT_DIR = Libft
+SRCS_DIR	=	srcs
+OBJS_DIR	=	objs
+INC_DIR		=	includes
+HEADER		=	$(INC_DIR)/minishell.h
 
-NAME = minishell
+CC			=	clang
+RM			=	/bin/rm -rf
+INC			=	-include ./$(HEADER)
+CC_FLAGS	=	-Wall -Wextra -Werror $(INC)
+LIB_DIR			=	lib
+LIB				=	$(LIB_DIR)/libft.a
 
-CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g #-fsanitize=address
+SRCS	=	$(addprefix $(SRCS_DIR)/, $(FILES))
+OBJS 	=	$(addprefix $(OBJS_DIR)/, $(FILES:.c=.o))
 
-LIBFT = $(addprefix $(LIBFT_DIR)/,libft.a)
+all:		$(NAME)
 
-all: $(LIBFT) $(NAME)
+$(NAME):	$(OBJS) $(HEADER)
+			@make -C $(LIB_DIR)
+			@$(CC) $(CC_FLAGS) $(OBJS) -lreadline  $(LIB) -o $(NAME)
+			@printf "$(GREEN)$(NAME) created with '$(CC_FLAGS)' flags\n$(END)"
+			@printf "$(PURPLE)Minishell is ready to work!\n$(END)"
 
-$(DIR_O)/%.o: $(DIR_S)/%.c
-	mkdir -p $(DIR_O)	
-	$(CC) $(CFLAGS) -o $@ -c $<
+$(OBJS_DIR)/%.o : $(SRCS_DIR)/%.c | $(OBJS_DIR)
+	    	@$(CC) $(CC_FLAGS) -c $< -o $@
 
-$(NAME): $(OBJS) $(LIBFT)
-		$(CC) $(CFLAGS) $^ -o $@
-
-$(LIBFT):
-		 make -C $(LIBFT_DIR)
+$(OBJS_DIR):
+		@mkdir -p $@
+		@mkdir $(addprefix $(OBJS_DIR)/, $(SUB_DIR))
+		@printf "Create object directories : $(GREEN)$(OBJS_DIR)\n$(END)"
+		@printf "Create object subdirectories : $(GREEN)$(SUB_DIR)\n$(END)"
 
 clean:
-		rm -f $(OBJS)		
-	rm -f $(OBJS)/*.o
-	rm -rf $(DIR_O)
-	make clean -C $(LIBFT_DIR)
+			@make clean -C $(LIB_DIR)
+			@$(RM) $(OBJS_DIR)
+			@printf "$(RED)Cleaning is done!\n$(END)"
 
-fclean: clean
-	rm -rf $(NAME)
-	make fclean -C $(LIBFT_DIR)
+fclean:		clean
+			@make fclean -C $(LIB_DIR)
+			@$(RM) $(NAME)
+			@printf "$(YELLOW)FCleaning is done!\n$(END)"
 
-re: fclean all
+re:			fclean all
 
-.PHONY: re fclean all clean
+.PHONY: clean fclean re compile all
