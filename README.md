@@ -1,7 +1,7 @@
 # Minishell
 ## Project overview
 
-This one of the hardest group project of the 42 common core. Why? Because we have to code from scratch a bash command line in C. The end product had to reproduce identically the behaviour of a bash command line. Obviously not all of it had to be implemented since it would take years to reproduce. You can see below the basic behaviour of the program with some typicall bash commands. The prject will not be explained in it is entirety since it is very detailled but the main concepts are explained below.
+This one of the hardest group project of the 42 common core. Why? Because we have to code from scratch a bash command line in C. It was extremely challenging and gratifying when completed. The end product had to reproduce identically the behaviour of a bash command line. Obviously not all of it had to be implemented since it would take years to reproduce. You can see below the basic behaviour of the program with some typicall bash commands. The prject will not be explained in it is entirety since it is very detailled but the main concepts are explained below.
 
 1. Launching and executing "echo hello":
 
@@ -47,7 +47,7 @@ On one part we had to recode built-in functions such as "cd", "pwd", etc. On the
 7. Signals overload (Ctr C, Ctrl D, etc.).
 8. Readline fucntion and history to create the command line entry.
 9. Advanced debugging and leaks managment (the most painful part... :sob:).
-10. Abstract Syntax Trees (loved it �:sunglasses:).
+10. Abstract Syntax Trees (loved it :sunglasses:).
 11. Lexer / Parsers.
 12. Tokenizers.
 13. Pids and processes managment (painfully with the reimplementation of the "cat | ls" commands :satisfied:).
