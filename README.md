@@ -6,19 +6,19 @@ This one of the hardest group project of the 42 common core. Why? Because we hav
 The end product had to reproduce identically the behaviour of a bash command line. Obviously not all of it had to be implemented since it would take years to reproduce.
 You can see below the basic behaviour of our program with some typicall bash commands. The project will not be explained in its entirety since it is very detailled. However, the main concepts are explained below.
 
-### Launching and executing "echo hello":
+### Launching and executing "echo hello"
 
 <p align="center">
 <img src="gifs/shot1.gif">
 </p>
 
-### Executing "ls" and "cat | ls":
+### Executing "ls" and "cat | ls"
 
 <p align="center">
 <img src="gifs/shot2.gif">
 </p>
 
-### Executing "ls > test.txt" to redirect output of "ls" into "test.txt":
+### Executing "ls > test.txt" to redirect output of "ls" into "test.txt"
 
 <p align="center">
 <img src="gifs/shot3.gif">
