@@ -4,21 +4,21 @@
 This one of the hardest group project of the 42 common core. Why? Because we have to code from scratch a bash command line in C. I worked on this project as a team with [Cyrena Cramdani](https://github.com/Cyren4). 
 
 The end product had to reproduce identically the behaviour of a bash command line. Obviously not all of it had to be implemented since it would take years to reproduce.
-You can see below the basic behaviour of our program with some typicall bash commands. The project will not be explained in it is entirety since it is very detailled. However, the main concepts are explained below.
+You can see below the basic behaviour of our program with some typicall bash commands. The project will not be explained in its entirety since it is very detailled. However, the main concepts are explained below.
 
-1. Launching and executing "echo hello":
+### 1. Launching and executing "echo hello":
 
 <p align="center">
 <img src="gifs/shot1.gif">
 </p>
 
-2. Executing "ls" and "cat | ls":
+### 2. Executing "ls" and "cat | ls":
 
 <p align="center">
 <img src="gifs/shot2.gif">
 </p>
 
-3. Executing "ls > test.txt" to redirect output of "ls" into "test.txt":
+### 3. Executing "ls > test.txt" to redirect output of "ls" into "test.txt":
 
 <p align="center">
 <img src="gifs/shot3.gif">
