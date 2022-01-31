@@ -1,7 +1,10 @@
 # Minishell
 ## Project overview
 
-This one of the hardest group project of the 42 common core. Why? Because we have to code from scratch a bash command line in C. It was extremely challenging and gratifying when completed. The end product had to reproduce identically the behaviour of a bash command line. Obviously not all of it had to be implemented since it would take years to reproduce. You can see below the basic behaviour of the program with some typicall bash commands. The prject will not be explained in it is entirety since it is very detailled but the main concepts are explained below.
+This one of the hardest group project of the 42 common core. Why? Because we have to code from scratch a bash command line in C. I worked on this project as a team with [Cyrena Cramdani](https://github.com/Cyren4). 
+
+The end product had to reproduce identically the behaviour of a bash command line. Obviously not all of it had to be implemented since it would take years to reproduce.
+You can see below the basic behaviour of our program with some typicall bash commands. The project will not be explained in it is entirety since it is very detailled. However, the main concepts are explained below.
 
 1. Launching and executing "echo hello":
 
